@@ -1,18 +1,4 @@
-//Eksempel fra Processing
-
-
-
-/* Clock
-
-*
-
-* The current time can be read with the second(), minute(),
-
-* and hour() functions. In this example, sin() and cos() values
-
-* are used to set the position of the hands.
-
-*/
+//En del er inspireret fra eksempel fra Processing
 
 
 
@@ -62,11 +48,11 @@ background(0);
 
 
 
-// Draw the clock background
+// Baggrunden af uret
 
 //vi har ændret farven af uret//
 
-fill(#12C48D);
+fill(#936274);
 
 noStroke();
 
@@ -74,9 +60,9 @@ ellipse(cx, cy, clockDiameter, clockDiameter);
 
 
 
-// Angles for sin() and cos() start at 3 o'clock;
+// Vinklerne for sin() og cos() starter kl 3
 
-// subtract HALF_PI to make them start at the top
+// - HALF_PI for at starte ved top
 
 float s = map(second(), 0, 60, 0, TWO_PI) - HALF_PI;
 
@@ -86,7 +72,7 @@ float h = map(hour() + norm(minute(), 0, 60), 0, 24, 0, TWO_PI * 2) - HALF_PI;
 
 
 
-// Draw the hands of the clock
+// Urvisere
 
 stroke(255);
 
@@ -108,7 +94,7 @@ line(cx, cy, cx + cos(h) * hoursRadius, cy + sin(h) * hoursRadius);
 
 
 
-// Draw the minute ticks
+// Timerne på dagen
 textSize(20);
 fill(252);
 text("1",385,60);
